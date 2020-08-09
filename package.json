@@ -1,18 +1,19 @@
 {
   "name": "oura-cloud-api",
   "version": "1.0.0",
-  "description": "No dependencies wrapper to access the Oura Cloud API",
+  "description": "Wrapper to access the Oura Cloud API, no dependencies.",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [
-		"oura",
-		"ring",
-		"cloud",
-		"api",
-		"wreapper"
-	],
+    "oura",
+    "ring",
+    "ouraring",
+    "cloud",
+    "api",
+    "wrapper"
+  ],
   "author": "Pintapoff@GitHub",
   "license": "ISC"
 }
