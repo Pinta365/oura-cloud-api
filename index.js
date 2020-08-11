@@ -99,7 +99,6 @@ class Client {
         const sleep = await this.#call('/sleep', qs);
         const activity = await this.#call('/activity', qs);
         const readiness = await this.#call('/readiness', qs);
-
         return { sleep: sleep.sleep, activity: activity.activity, readiness: readiness.readiness };
     }
 }
