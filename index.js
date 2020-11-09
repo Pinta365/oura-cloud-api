@@ -101,6 +101,12 @@ class Client {
         const readiness = await this.#call('/readiness', qs);
         return { sleep: sleep.sleep, activity: activity.activity, readiness: readiness.readiness };
     }
+
+    async getIdealBedtime(qs) {
+        this.#validateQueryString(qs, ['start', 'end']);
+        const call = await this.#call('/bedtime', qs);
+        return call.ideal_bedtimes;
+    }
 }
 
 module.exports = Client; 
