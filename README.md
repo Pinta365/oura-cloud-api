@@ -51,3 +51,6 @@ With the summary methods you can supply start and end dates in the format 'YYYY-
 
 This method returns an object with the above three summary methods in the format of: {sleep:[], activity:[], readiness:[]}.
 >getSummaries({start, end})
+
+Returns the ideal bedtimes window based on Ouras sleep data.
+>getIdealBedtime({start, end})
