@@ -1,4 +1,4 @@
-## OURA-CLOUD-API
+## OURA-CLOUD-API (updated for v2 of the API)
 This lib was created for my own personal use, putting it up in case anyone else is in need of the same :)
 Since it's for personal use it only support authentication with access-token, might add OAuth in the future.
 
@@ -37,9 +37,10 @@ const Client = require("oura-cloud-api");
 
 ### Available methods
 
+returns users personal information  (e.g. age, email, weight, and height)
 >GetPersonalInfo()
 
-Supply start_date and end_date as an object parameter to specify a time frame ex { start_date: "2022-08-15", end_date: "2022-08-16" }
+For the following methods you optionally supply start_date and end_date as an object parameter to specify a time frame ex { start_date: "2022-08-15", end_date: "2022-08-16" }. Previous day will be used if parameter is omitted. 
 >getDailyActivity()
 
 >getDailyReadiness()
@@ -54,5 +55,5 @@ Supply start_date and end_date as an object parameter to specify a time frame ex
 
 >getWorkout()
 
-Supply start_datetime and end_datetime as an object parameter to specify a time frame ex { start_datetime: "2022-08-15T00:00:00", end_datetime: "2022-08-17T00:00:00" }
+For the following methods you optionally supply start_datetime and end_datetime as an object parameter to specify a time frame ex { start_datetime: "2022-08-15T00:00:00", end_datetime: "2022-08-17T00:00:00" }. Previous day will be used if parameter is omitted.
 >GetHeartrate()
