@@ -41,11 +41,17 @@ const Client = require("oura-cloud-api");
 
 Supply start_date and end_date as an object parameter to specify a time frame ex { start_date: "2022-08-15", end_date: "2022-08-16" }
 >getDailyActivity()
+
 >getDailyReadiness()
+
 >getDailySleep()
+
 >getSession()
+
 >getSleep()
+
 >getTag()
+
 >getWorkout()
 
 Supply start_datetime and end_datetime as an object parameter to specify a time frame ex { start_datetime: "2022-08-15T00:00:00", end_datetime: "2022-08-17T00:00:00" }
