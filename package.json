@@ -1,7 +1,7 @@
 {
   "name": "oura-cloud-api",
-  "version": "1.0.2",
-  "description": "Wrapper to access the Oura Cloud API, no dependencies.",
+  "version": "2.0.0",
+  "description": "Wrapper to access the Oura Cloud API, no dependencies. Using v2 of the Oura API",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -12,13 +12,17 @@
     "ouraring",
     "cloud",
     "api",
-    "wrapper"
+    "wrapper",
+    "v2"
   ],
-  "author": "Pintapoff@GitHub",
+  "author": "Pinta365@GitHub",
   "license": "ISC",
   "repository": {
     "type": "git",
-    "url": "https://github.com/pintapoff/oura-cloud-api.git"
+    "url": "https://github.com/pinta365/oura-cloud-api.git"
+  },
+  "engines": {
+    "node": ">=18"
   },
   "devDependencies": {
     "eslint": "^8.23.0"
