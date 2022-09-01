@@ -3,7 +3,7 @@ This lib was created for my own personal use, putting it up in case anyone else 
 Since it's for personal use it only support authentication with access-token, might add OAuth in the future.
 
 Login to the [Oura Cloud](https://cloud.ouraring.com/) with your Oura credentials and create an [Personal Access Token](https://cloud.ouraring.com/personal-access-tokens).  
-Details around what information the  API can return is found here: [Oura Cloud API](https://cloud.ouraring.com/docs/) 
+Details around what information the  API can return is found here: [Oura Cloud API v2](https://cloud.ouraring.com/v2/docs) 
 
 ### Installation
 >npm install oura-cloud-api
@@ -11,19 +11,19 @@ Details around what information the  API can return is found here: [Oura Cloud A
 ### Example
 Replace the accessToken below with your own personal access token found at [Personal Access Token](https://cloud.ouraring.com/personal-access-tokens)
 ```javascript
-const Client = require('oura-cloud-api');
+const Client = require("oura-cloud-api");
 
 (async () => {
     
-    const accessToken = 'RDEOSTZPD4...';
+    const accessToken = "RDEOSTZPD4...";
     
     try {
         const client = new Client(accessToken);
         
-        const userInfo  = await client.getUserInfo();
+        const userInfo  = await client.GetPersonalInfo();
         console.log(`The call returned: ${JSON.stringify(userInfo)}`);
         
-        const sleep  = await client.getReadinessSummaries({ start: '2020-01-15', end: '2020-01-20' });
+        const sleep  = await client.getDailyReadiness({ start_date: "2022-08-15", end_date: "2022-08-16" });
         console.log(`The call returned: ${JSON.stringify(sleep)}`);
        
     } catch (error) {
@@ -37,20 +37,16 @@ const Client = require('oura-cloud-api');
 
 ### Available methods
 
-returns the user object.
->getUserInfo()
+>GetPersonalInfo()
 
->getPersonalInfo()
+Supply start_date and end_date as an object parameter to specify a time frame ex { start_date: "2022-08-15", end_date: "2022-08-16" }
+>getDailyActivity()
+>getDailyReadiness()
+>getDailySleep()
+>getSession()
+>getSleep()
+>getTag()
+>getWorkout()
 
-With the summary methods you can supply start and end dates in the format 'YYYY-MM-DD', as seen in the example above.
->getSleepSummaries({start, end})
-
->getActivitySummaries({start, end})
-
->getReadinessSummaries({start, end})
-
-This method returns an object with the above three summary methods in the format of: {sleep:[], activity:[], readiness:[]}.
->getSummaries({start, end})
-
-Returns the ideal bedtimes window based on Ouras sleep data.
->getIdealBedtime({start, end})
+Supply start_datetime and end_datetime as an object parameter to specify a time frame ex { start_datetime: "2022-08-15T00:00:00", end_datetime: "2022-08-17T00:00:00" }
+>GetHeartrate()
