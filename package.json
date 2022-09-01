@@ -19,5 +19,8 @@
   "repository": {
     "type": "git",
     "url": "https://github.com/pintapoff/oura-cloud-api.git"
+  },
+  "devDependencies": {
+    "eslint": "^8.23.0"
   }
 }
