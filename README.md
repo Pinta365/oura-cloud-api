@@ -1,3 +1,15 @@
+
+---
+> **Warning**
+>
+> Development of this repository has been stopped.
+> Check out this [Deno repository](https://github.com/Pinta365/oura_api) for future changes and updates.
+>
+> **Warning**
+
+---
+
+
 ## OURA-CLOUD-API (updated for v2 of the API)
 This lib was created for my own personal use, putting it up in case anyone else is in need of the same :)
 Since it's for personal use it only support authentication with access-token, might add OAuth in the future.
