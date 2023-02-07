@@ -3,7 +3,9 @@
 > **Warning**
 >
 > Development of this repository has been stopped.
-> Check out this [Deno repository](https://github.com/Pinta365/oura_api) for future changes and updates.
+> Check out this [deno repository](https://github.com/Pinta365/oura_api) for future changes and updates
+
+> Also still available for Node.JS at [NPM](https://www.npmjs.com/package/oura_api).
 >
 > **Warning**
 
